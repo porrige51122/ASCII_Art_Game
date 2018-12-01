@@ -18,7 +18,7 @@ public class Question {
 	}
 
 	public boolean isAnswerCorrect(String answer) {
-		return answer.equals(this.answer);
+		return this.answer.equals(answer + ".jpg") || this.answer.equals(answer + ".png");
 	}
 
 	public void print(int diff) throws IOException {
