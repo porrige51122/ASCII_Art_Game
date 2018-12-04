@@ -10,7 +10,6 @@ public class ASCII {
 		BufferedImage img = ImageIO.read(file);
 		String cha = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:,^`.";
 		char[] chaArr = cha.toCharArray();
-//		small = 20; medium = 50; large = 75;
 		int width = img.getWidth();
 		int height = img.getHeight();
 		int sizeW,sizeH,scale;
@@ -35,7 +34,12 @@ public class ASCII {
 		int temp = 0;
 		int c = 0;
 		char[] output = new char[(sizeW * (scale / 2)) * (sizeH * scale)];
-
+		
+		/*
+		 * This section gets the average greyscale of the pixels in which the size of the average
+		 * is calculated from the resolution. This is initialised by selecting easy, medium or hard
+		 * in the game startup
+		 */
 		for (int i = 0; i < height - (scale - 1); i += scale) {
 			for (int j = 0; j < width - ((scale / 2) - 1); j += (scale / 2)) {
 				for (int k = 0; k < (scale) / 2; k++) {
