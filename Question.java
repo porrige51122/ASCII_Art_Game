@@ -9,12 +9,11 @@ public class Question {
 	public Question(String path) {
 		this.path = path;
 		f = new File(path);
-		char[] chars = f.getName().toCharArray();
-		answer = f.getName();
-		char[] characterCount = answer.toCharArray();
-		char[] output = new char[characterCount.length-4];
-		answer.getChars(0, characterCount.length-4, answer, 0);
-		return chars1;
+		char[] extension = f.getName().toCharArray();
+		answer = "";
+		for (int i = 0;i < extension.length-4 ;i++) {
+			answer += String.valueOf(extension[i]);
+		}
 	}
 
 	public String getAnswer() {
