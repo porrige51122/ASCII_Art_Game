@@ -10,7 +10,7 @@ import java.util.HashSet;
 class Main {
 	static int diff;
 	static String category;
-	static final String path = "/Users/William/Desktop/ascii-art-search-engine-image-processor/src/";
+	static final String path = "";
 	static final List<Question> questions = new ArrayList<Question>();
 	static final Set<Integer> used = new HashSet<Integer>();
 
@@ -22,10 +22,10 @@ class Main {
 
     	System.out.print("Enter diff (e, m, h): ");
 		switch (keys.next()) {
-    		case "e": diff = 75;
-    		case "m": diff = 50;
-    		case "h": diff = 20;
-    		default: diff = 75;
+    		case "e": diff = 75; break;
+    		case "m": diff = 50; break;
+    		case "h": diff = 20; break;
+    		default: diff = 75; break;
 		}
 
 		File[] files = new File(path + category).listFiles();
